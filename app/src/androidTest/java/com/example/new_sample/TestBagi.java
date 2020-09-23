@@ -16,17 +16,18 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class TesTambah {
+public class TestBagi {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void tesKlikButtonSatu(){
+    public void tes(){
         //cari id button1 terus di klik
-        onView(withId(R.id.button6)).perform(click());
+        onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.button_divide)).perform(click());
         onView(withId(R.id.button3)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("2")));
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("3")));
     }
 
 }

@@ -16,7 +16,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class TesKlikButton {
+public class TestClear {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
@@ -33,7 +33,8 @@ public class TesKlikButton {
         onView(withId(R.id.button8)).perform(click());
         onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.button0)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("1234567890")));
+        onView(withId(R.id.button_clear)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
     }
 
 }

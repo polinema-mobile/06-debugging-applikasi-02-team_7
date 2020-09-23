@@ -16,24 +16,17 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class TesKlikButton {
+public class TestExtra {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
     public void tes(){
         //cari id button1 terus di klik
-        onView(withId(R.id.button1)).perform(click());
-        onView(withId(R.id.button2)).perform(click());
-        onView(withId(R.id.button3)).perform(click());
         onView(withId(R.id.button4)).perform(click());
-        onView(withId(R.id.button5)).perform(click());
-        onView(withId(R.id.button6)).perform(click());
-        onView(withId(R.id.button7)).perform(click());
-        onView(withId(R.id.button8)).perform(click());
-        onView(withId(R.id.button9)).perform(click());
-        onView(withId(R.id.button0)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("1234567890")));
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("-4")));
     }
 
 }
